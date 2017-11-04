@@ -1,0 +1,191 @@
+othello> print
+Error! No active game.
+othello> move A1
+Error! No active game.
+othello> abort
+Error! No active game.
+othello> hole A1:A1
+Error! No active game.
+othello> new
+Error! Unknown command: 'new'
+othello> newGame
+Error! Wrong number of parameters. Three or four parameters expected.
+othello> newGame 4 3
+Error! Expected an even line number between 2-98.
+othello> newGame 1 4
+Error! Expected an even column number between 2-26.
+othello> newGame 2 2
+Game has ended in a draw.
+othello> print
+Error! No active game.
+othello> newGame 4 4
+othello> print
+----
+-WB-
+-BW-
+----
+turn: black
+othello> hole XXXXX
+Error! Invalid hole parameters.
+othello> hole A1:AA
+Error! Invalid hole parameters.
+othello> hole A1:A9
+Error! Point: A9 does not exist.
+othello> hole 4A:A1
+Error! Invalid hole parameters.
+othello> hole Z1:A1
+Error! Point: Z1 does not exist.
+othello> hole A1:A1
+othello> print
+#---
+-WB-
+-BW-
+----
+turn: black
+othello> possibleMoves
+Possible moves: A2,B1,C4,D3
+othello> move AA
+Error! Invalid move parameters.
+othello> move A22
+Error! Point does not exist.
+othello> move A2
+othello> print
+#---
+BBB-
+-BW-
+----
+turn: white
+othello> possibleMoves
+Possible moves: A3,C1
+othello> move A3
+othello> possibleMoves
+Possible moves: A4,B4,C4,D4
+othello> move A4
+othello> possibleMoves
+Possible moves: C1
+othello> move C1
+othello> possibleMoves
+Possible moves: D1,D2,D3,D4
+othello> move D3
+othello> possibleMoves
+Possible moves: C4
+othello> move C4
+othello> print
+#-W-
+BBW-
+BBWB
+B-W-
+turn: black
+othello> possibleMoves
+Possible moves: B1,D1,D2,D4
+othello> move D1
+Game Over! black has won (8:3)!
+othello> print
+Error! No active game.
+othello> newGame 4 4 W---,BBBB,----,----
+black passes.
+othello> print
+W---
+BBBB
+----
+----
+turn: white
+othello> possibleMoves
+Possible moves: A3,C3
+othello> hole A1:A1
+Error! Hole is not allowed. Stones between the hole!
+othello> hole C3:D4
+othello> print
+W---
+BBBB
+--##
+--##
+turn: white
+othello> possibleMoves
+Possible moves: A3
+othello> move A3
+black passes.
+othello> print
+W---
+WBBB
+W-##
+--##
+turn: white
+othello> Hole B1:B1
+Error! Unknown command: 'Hole'
+othello> hole B1:B1
+Error! Cannot add hole area. Game has already started!
+othello> possibleMoves
+Possible moves: C1
+othello> move C1
+Game Over! white has won (5:2)!
+othello> newGame 2 8
+othello> print
+--
+--
+--
+WB
+BW
+--
+--
+--
+turn: black
+othello> hole A1:B3
+othello> print
+##
+##
+##
+WB
+BW
+--
+--
+--
+turn: black
+othello> possibleMoves
+Possible moves: B6
+othello> move B6
+othello> print
+##
+##
+##
+WB
+BB
+-B
+--
+--
+turn: white
+othello> abort
+Game Over! black has won (4:1)!
+othello> print
+Error! No active game.
+othello> newGame 4 4
+othello> possibleMoves
+Possible moves: A2,B1,C4,D3
+othello> move A1
+Move not possible.
+othello> abort
+Game has ended in a draw.
+othello> newGame 4 4 WWWW,WWWW,WWWW,WWWB
+Game Over! white has won (15:1)!
+othello> newGame 2 2 BB,WW
+Game has ended in a draw.
+othello> newGame 2 2 WWW,BBB,WWW
+Error! Invalid column length.
+othello> newGame 2 2 WW,BB,WW
+Error! Invalid line length.
+othello> WW,BB
+Error! Unknown command: 'WW,BB'
+othello> newGame WW,BB
+Error! Wrong number of parameters. Three or four parameters expected.
+othello> newGame 2 2 WW,BB
+Game has ended in a draw.
+othello> newGame 2 2 WWW,BBB
+Error! Invalid column length.
+othello> newGame 2 2 BW,WE
+Error! Invalid board parameters. Expected: B, W, #, -, ,
+othello> newGame 2 2 BB,W-
+Game Over! black has won (2:1)!
+othello> newGame 4 4
+othello> abort
+Game has ended in a draw.
+othello> quit
